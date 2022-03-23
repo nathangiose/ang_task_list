@@ -26,4 +26,9 @@ export class AppComponent {
   done(id:number){
     this.tasks[id].isCompleted = !this.tasks[id].isCompleted;
   }
+
+  remove(id:number){
+    this.tasks = this.tasks.filter((v,i)=> 
+    i !== id);
+  }
 }
