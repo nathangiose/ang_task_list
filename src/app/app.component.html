@@ -7,14 +7,14 @@
     <div class="col col-lg-3">
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Enter Task" aria-label="Enter Task" aria-describedby="button-addon2" [(ngModel)]="newTask">
-        <button class="btn btn-outline-secondary btn-primary" type="button" id="button-addon2" (click)="saveTask()">Add Task</button>
+        <button class="btn btn-outline-secondary btn-dark" type="button" id="button-addon2" (click)="saveTask()">Add Task</button>
       </div>
       <table class="table table-striped">
         <tbody>
           <tr *ngFor="let task of tasks; let i = index">
             <th scope="row">{{ i+1 }}</th>
             <td class="{{(!task.isCompleted)?'done':''}}" (click)="done(i)">{{ task.name }}</td>
-            <td id="col2" (click)="remove(i)">X</td>
+            <td id="col2" (click)="remove(i)"><button type="button" class="btn-close" aria-label="Close"></button></td>
       </table>
     </div>
   </div>
